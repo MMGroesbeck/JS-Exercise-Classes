@@ -174,14 +174,15 @@ class Student extends Lambdasian{
     this.grade = 50;
   }
   listSubjects(){
-    let subjects = `Loving `;
-    this.favSubjects.forEach(function(item, index){
-      subjects += item;
-      if (index < this.length - 1) {
-        subjects += ', ';
-      }
-    },this.favSubjects);
-    return subjects + `!`;
+    return `Loving ${this.favSubjects.join(', ')}!`;
+  //   let subjects = `Loving `;
+  //   this.favSubjects.forEach(function(item, index){
+  //     subjects += item;
+  //     if (index < this.length - 1) {
+  //       subjects += ', ';
+  //     }
+  //   },this.favSubjects);
+  //   return subjects + `!`;
   }
   PRAssignment(subject){
     return `${this.name} has submitted a PR for ${subject}`
