@@ -145,6 +145,9 @@ class Instructor extends Lambdasian{
   grade(student, subject){
     return `${student.name} receives a perfect score on ${subject}`
   }
+  randomPoints(student){
+    student.grade += ((Math.random() * 20) - 10);
+  }
 }
 
 /*
@@ -168,6 +171,7 @@ class Student extends Lambdasian{
     this.previousBackground = arg.previousBackground;
     this.className = arg.className;
     this.favSubjects = arg.favSubjects;
+    this.grade = 50;
   }
   listSubjects(){
     let subjects = `Loving `;
@@ -184,6 +188,13 @@ class Student extends Lambdasian{
   }
   sprintChallenge(subject){
     return `${this.name} has begun sprint challenge on ${subject}`
+  }
+  graduate(){
+    if (this.grade > 70){
+      return `${this.name} is ready to graduate!`;
+    }else{
+      return `${this.name} should keep studying; current grade is ${this.grade}%.`;
+    }
   }
 }
 
