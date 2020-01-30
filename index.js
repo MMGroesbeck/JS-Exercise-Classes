@@ -193,7 +193,7 @@ class Student extends Lambdasian{
     if (this.grade > 70){
       return `${this.name} is ready to graduate!`;
     }else{
-      return `${this.name} should keep studying; current grade is ${this.grade}%.`;
+      return `${this.name} should keep studying; current grade is ${Math.round(this.grade)}%.`;
     }
   }
 }
